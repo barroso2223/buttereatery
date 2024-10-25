@@ -350,7 +350,7 @@ nav .faFonts {
     z-index: -1;
 } */
 
-/* #home video {
+#home video {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -360,7 +360,7 @@ nav .faFonts {
 	object-position: center;
     opacity: .4;
 	z-index: -2;
-} */
+}
 
 #home .logoContainer {
 	margin-bottom: 4rem;
