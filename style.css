@@ -1035,7 +1035,8 @@ nav .faFonts {
         justify-content: center; 
         flex-wrap: wrap; 
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 1.5rem;
+        font-family: var(--ffAccent);
         height: 5dvh;
         max-width: 100dvw;
         margin: auto;
@@ -1053,12 +1054,15 @@ nav .faFonts {
         margin: 0 10px; 
         text-decoration: none;
         color: var(--clrMain100);
-		font-size: .5rem;
         display: flex;
         justify-content: center;
 		width: fit-content;
 		height: fit-content;
 	}
+
+    #navBar ul li a {
+        font-size: .75rem;
+    }
 	
 	#navBar ul li:hover,
 	#navBar ul a:hover {
