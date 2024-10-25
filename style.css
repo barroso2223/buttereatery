@@ -79,6 +79,7 @@ span {
 
 header nav ul li {
     font-size: var(--fsNavBar);
+    font-family: var(--ffAccent);
 }
 
 h2, 
