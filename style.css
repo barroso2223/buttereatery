@@ -1005,11 +1005,12 @@ nav .faFonts {
 
 	#home header {
 		height: 35dvh;
-		margin-top: -1rem;
+		/* margin-top: -1rem; */
 	}
 
 	#home .container {
 		margin-bottom: 1rem;
+        margin-top: 1rem;
 		z-index: 1;
 	}
 
