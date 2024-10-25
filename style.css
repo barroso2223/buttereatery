@@ -1062,6 +1062,7 @@ nav .faFonts {
 
     #navBar ul li a {
         font-size: .75rem;
+        font-family: var(--ffAccent);
     }
 	
 	#navBar ul li:hover,
