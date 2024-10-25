@@ -35,7 +35,7 @@
 }
 
 body {
-    font-family: var(--ffTheme);
+    font-family: var(--ffAccent);
     font-weight: 400;
     font-size: var(--fsMain);
     line-height: 1.6;
@@ -490,6 +490,7 @@ nav .faFonts {
 #services h2 {
 	text-align: center;
 	margin: auto;
+    margin-bottom: 1rem;
 	width: clamp(200px, 50vw, 800px);
 }
 
@@ -1101,6 +1102,10 @@ nav .faFonts {
 		max-width: 80dvw;
 		margin: auto;
 	}
+
+    #services h2 {
+        margin-bottom: 1rem;
+    }
 
     .menuCard {
         margin-top: 2rem;
