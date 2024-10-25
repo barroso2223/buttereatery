@@ -332,14 +332,15 @@ nav .faFonts {
 	min-height: 100dvh;
 	max-width: 100dvw;
 	color: var(--clrTheme2);
-	background: var(--clrMain900);
+	background: url(images/background.png);
+    background-size: cover;
 	position: relative;
 	text-align: center;
     z-index: 1;
 	display: grid;
 	place-items: center;
 }
-
+/* 
 #home::before {
     content: "";
     position: absolute;
@@ -347,7 +348,7 @@ nav .faFonts {
     background-size: cover;
     inset: 0;
     z-index: -1;
-}
+} */
 
 /* #home video {
 	position: absolute;
@@ -1009,7 +1010,7 @@ nav .faFonts {
 		/* margin-top: -1rem; */
 	}
 
-	#home .container {
+	#home .container .main {
 		margin-bottom: 1rem;
         margin-top: 1rem;
 		z-index: 1;
