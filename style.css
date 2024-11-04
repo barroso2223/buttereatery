@@ -20,6 +20,7 @@
 	--fsSpecial: clamp(1rem, 3vw, 1.5rem);
 	--fsSectionHeader: clamp(2rem, 6vw, 3rem);
 	--fsContentHeader: clamp(1.5rem, 5vw, 2.5rem);
+    --fsboldHeader: clamp(2.5px, 6vw, 4.5rem);
 	--fsContentHeaderMed: clamp(1.5rem, 4.5vw, 2rem);
     --fsNavBar: clamp(.5rem, 2vw, .65rem);
     --logoWidth: clamp(15rem, 5vw, 20rem);
@@ -74,7 +75,7 @@ h2 {
     align-items: center;
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
-    font-size: var(--fsSectionHeader);
+    font-size: var(--fsboldHeader);
     background-image: url("images/meltingButter.png");
     inset: 0;
     background-size: cover;
@@ -359,7 +360,7 @@ nav .faFonts a {
 	display: grid;
 	place-items: center;
     border-bottom: 1px solid var(--clrMain900);
-    box-shadow: 4px 4px 30px var(--clrMain900);
+    box-shadow: -3px 3px 50px var(--clrMain900);
 
 }
 /* 
@@ -381,8 +382,8 @@ nav .faFonts a {
 	object-fit: cover;
 	object-position: center;
     opacity: .4;
-    border-bottom: 1px solid var(--clrMain900);
-    box-shadow: 4px 4px 30px var(--clrMain900);
+    border-bottom: .5px solid var(--clrMain900);
+    box-shadow: 3px 3px 50px var(--clrMain900);
 	z-index: -2;
 }
 
@@ -424,7 +425,6 @@ nav .faFonts a {
 	margin: auto;
 	width: clamp(200px, 50vw, 800px);
 	padding-top: .5rem;
-    font-size: 4.5rem;
 	margin-bottom: 2rem;
     line-height: 1.2rem;
     padding-bottom: 2rem;
@@ -485,7 +485,7 @@ nav .faFonts a {
 
 #about h2 {
 	margin-bottom: 2rem;
-    font-size: 4.5rem;
+    font-size: var(--fsboldHeader)
     line-height: .3;
     padding-bottom: 2rem;
     padding-top: 1rem;
