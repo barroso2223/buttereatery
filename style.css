@@ -338,6 +338,11 @@ nav .faFonts {
 	padding-top: .75rem;
 	margin: 0 2rem;
 	font-size: var(--fsNavBar);
+
+}
+
+nav .faFonts a {
+    margin-left: .5rem;
 }
 
 /* home */
@@ -1146,6 +1151,25 @@ nav .faFonts {
 		object-fit: contain;
 		object-position: bottom;
 		padding-top: 3.5rem;
+    }
+
+  
+    #home .container h1 {
+    	text-align: center;
+    	margin: auto;
+    	width: clamp(200px, 50vw, 800px);
+    	padding-top: .5rem;
+        font-size: 2.5rem;
+    	margin-bottom: 1rem;
+        line-height: 1.9rem;
+        padding-bottom: 1rem;
+    }
+
+    #home #homeText span {
+        font-size: .75rem;
+        color: var(--clrTheme1);
+        margin-bottom: -3rem;
+
     }
 
 	.splitLeft,
