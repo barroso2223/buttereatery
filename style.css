@@ -13,7 +13,7 @@
 
 	
 
-	--ffTheme: "Rubik Doodle Shadow", system-ui, monospace, Helvetica, sans-serif;
+	--ffTheme: "Luckiest Guy", "Rubik Doodle Shadow", system-ui, monospace, Helvetica, sans-serif;
 	--ffAccent: Arial, Helvetica, sans-serif;
 
 	--fsMain: clamp(.75rem, 3vw, 1rem);
@@ -35,12 +35,20 @@
 }
 
 body {
+    width: 100%;
+    height: 100%;
     font-family: var(--ffAccent);
+    background: var(--clrMain900);
     font-weight: 400;
     font-size: var(--fsMain);
     line-height: 1.6;
 	background: url(images/background.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    background-attachment: fixed;
+    position: absolute;
+    inset: 0;
 	padding: 0;
 	margin: 0;
 	overflow-x: hidden;
@@ -60,11 +68,20 @@ p {
 } 
 
 h1,
-h2 {
-    font-family: var(--ffTheme);
+h2 { 
+    display: grid;
+    place-content: center;
+    align-items: center;
+    font-family: "Luckiest Guy", cursive;
     font-weight: 400;
-    line-height: 1.2;
-    font-size: var(--fsContentHeader);
+    font-size: var(--fsSectionHeader);
+    background-image: url("images/meltingButter.png");
+    inset: 0;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
 }
 
 h3 {
@@ -161,26 +178,23 @@ ul {
 	margin: 0 auto;
 	overflow-x: hidden;
 	display: grid;
-    background: var(--clrMain100);
 	place-items: center;
     position: relative;
     z-index: 1;
 }
 
-#gallery::before,
+/* #gallery::before,
 #testimonial::before,
 #faq::before,
 #about::before,
 #contactMe::before {
 	content: '';
     position: absolute;
-    background: url(images/background.png);
     background-size: cover;
-    background-blend-mode: overlay;
     opacity: .7;
     inset: 0;
     z-index: -1;
-}
+} */
 
 #faq,
 #services,
@@ -208,7 +222,7 @@ button,  {
 	border: 2px solid var(--clrMain300);
 	border-radius: .5rem;
 	color: var(--clrTheme2);
-	background: var(--ombreTheme);
+	background: var(--clrTheme1);
 	margin-top: 2rem;
 }
 
@@ -220,7 +234,7 @@ button,  {
 button div a {
 	text-decoration: none;
 	list-style: none;
-    color: var(--clrTheme2);
+    color: var(--clrMain900);
 }
 
 button div a:hover {
@@ -339,6 +353,9 @@ nav .faFonts {
     z-index: 1;
 	display: grid;
 	place-items: center;
+    border-bottom: 1px solid var(--clrMain900);
+    box-shadow: 4px 4px 30px var(--clrMain900);
+
 }
 /* 
 #home::before {
@@ -359,6 +376,8 @@ nav .faFonts {
 	object-fit: cover;
 	object-position: center;
     opacity: .4;
+    border-bottom: 1px solid var(--clrMain900);
+    box-shadow: 4px 4px 30px var(--clrMain900);
 	z-index: -2;
 }
 
@@ -400,7 +419,15 @@ nav .faFonts {
 	margin: auto;
 	width: clamp(200px, 50vw, 800px);
 	padding-top: .5rem;
+    font-size: 4.5rem;
 	margin-bottom: 2rem;
+    line-height: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+#home #homeText span {
+    font-size: 1rem;
+    color: var(--clrTheme1);
 }
 
 #home .container p {
@@ -408,6 +435,7 @@ nav .faFonts {
 	margin: auto;
 	width: clamp(250px, 60vw, 900px);
 	padding-top: .5rem;
+    margin-top: 2rem;
 }
 
 
@@ -434,7 +462,6 @@ nav .faFonts {
     place-items: center;
 	place-content: center;
 	margin: auto;
-	background: var(--bgaccent);
 	color: var(--clrTheme1);
     overflow: hidden;
     position: relative;
@@ -453,6 +480,16 @@ nav .faFonts {
 
 #about h2 {
 	margin-bottom: 2rem;
+    font-size: 4.5rem;
+    line-height: .3;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+#about #aboutText span {
+    color: var(--clrTheme1);
+    font-size: 1rem;
 }
 
 #about .split {
@@ -480,7 +517,6 @@ nav .faFonts {
 	place-content: center;
 	/* margin: auto; */
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-	background: var(--clrMain900);
 	color: var(--clrTheme2);
     overflow: hidden;
     position: relative;
@@ -537,7 +573,6 @@ nav .faFonts {
     place-items: center;
 	place-content: center;
 	margin: auto;
-	background: var(--ombreTheme);
 	color: var(--clrTheme2);
     position: relative;
 	/* line-height: 1.3; */
@@ -776,7 +811,6 @@ nav .faFonts {
 
 #contactMe {
 	color: var(--clrTheme2);
-	background: var(--clrMain900);
 	min-height: 100dvh;
 	max-width: 100dvw;
 	display: grid;
@@ -890,7 +924,11 @@ nav .faFonts {
 	-o-animation: ease-in-out both scrollReveal;
 	animation: ease-in-out both scrollReveal;
 	animation-timeline: view();
-	animation-range: entry 50% cover 50%;
+	animation-range: entry 0% cover 40%;
+}
+
+#about .imgCard {
+    transition-delay: 200ms;
 }
 
 @keyframes scrollReveal {
