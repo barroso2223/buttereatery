@@ -76,6 +76,7 @@ h2 {
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
     font-size: var(--fsboldHeader);
+    background: var(--clrTheme1);
     background-image: url("images/meltingButter.png");
     inset: 0;
     background-size: cover;
