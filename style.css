@@ -5,7 +5,7 @@
 	--clrTheme2: rgb(243, 197, 54);
     --clrHomeText: rgb(43, 59, 113);
 	--clrMain100: white;
-	--clrMain300: rgb(167, 154, 168);
+	--clrMain300: rgb(114, 113, 114);
 	--clrMain900: black;
     --bgaccent: rgb(170, 144, 17);
     --collageBorder: rgb(211, 177, 93);
@@ -360,8 +360,8 @@ nav .faFonts a {
     z-index: 1;
 	display: grid;
 	place-items: center;
-    border-bottom: 1px solid var(--clrMain900);
-    box-shadow: -3px 3px 50px var(--clrMain900);
+    border-bottom: 5px solid transparent;
+    box-shadow: 5px 5px 50px var(--clrMain900);
 
 }
 /* 
@@ -383,7 +383,7 @@ nav .faFonts a {
 	object-fit: cover;
 	object-position: center;
     opacity: .4;
-    border-bottom: .5px solid var(--clrMain900);
+    border-bottom: .5px solid transparent;
     box-shadow: 3px 3px 50px var(--clrMain900);
 	z-index: -2;
 }
@@ -450,13 +450,13 @@ nav .faFonts a {
 	place-items: center;
 	place-self: center;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 2rem;
+	gap: 3rem;
 	padding: .5rem 2rem ;
 }
 
 .splitLeft,
 .splitRight {
-	min-width: 300px;
+	max-width: 700px;
 }
 	
 #about {
@@ -485,12 +485,13 @@ nav .faFonts a {
 }
 
 #about h2 {
+    text-align: left;
+	margin: auto;
+	width: clamp(200px, 50vw, 800px);
+	padding-top: .5rem;
 	margin-bottom: 2rem;
-    font-size: var(--fsboldHeader)
-    line-height: .3;
+    line-height: 1.2rem;
     padding-bottom: 2rem;
-    padding-top: 1rem;
-    text-align: center;
 }
 
 #about #aboutText span {
@@ -502,11 +503,23 @@ nav .faFonts a {
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     place-content: center;
+    text-align: left;
+    gap: 3rem;
 }
 
 #about .splitLeft {
 	display: grid;
 	place-content: center;
+    padding-right: 1rem;
+}
+
+#about .splitLeft p {
+    max-width: 500px;
+}
+
+#about .splitRight {
+    margin: auto;
+    margin-left: 2rem;
 }
 
 #about #nextPageIcons {
@@ -1155,7 +1168,8 @@ nav .faFonts a {
     }
 
   
-    #home .container h1 {
+    #home .container h1,
+    #about h2 {
     	text-align: center;
     	margin: auto;
     	width: clamp(200px, 50vw, 800px);
@@ -1166,7 +1180,8 @@ nav .faFonts a {
         padding-bottom: 1rem;
     }
 
-    #home #homeText span {
+    #home #homeText span,
+    #about #aboutText span {
         font-size: .75rem;
         color: var(--clrTheme1);
         margin-bottom: -3rem;
